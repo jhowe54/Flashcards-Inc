@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams, useHistory, Link } from "react-router-dom";
 import { updateCard, readCard, readDeck } from "../utils/api";
 import CardForm from "./CardForm";
+import "./Home.css"
 
 function EditCard() {
   const { deckId, cardId } = useParams();
@@ -75,11 +76,11 @@ function EditCard() {
   return (
     <div className="container">
       <nav aria-label="breadcrumb">
-        <ul className="breadcrumb">
+        <ol className="breadcrumb">
           <li className="breadcrumb-item"><Link to="/">Home</Link></li>
           <li className="breadcrumb-item "><Link to={`/decks/${deckId}`}>{deck.name}</Link></li>
-          <li className="breadcrumb-item" aria-current="page"><Link to={`/decks/${deckId}`}>{`Edit Card ${card.id}`}</Link></li>
-        </ul>
+          <li className="breadcrumb-item active" aria-current="page">Edit Card</li>
+        </ol>
       </nav>
 
       <div className="m-4">
