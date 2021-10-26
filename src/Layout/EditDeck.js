@@ -52,7 +52,7 @@ function EditDeck() {
         <ul className="breadcrumb">
           <li className="breadcrumb-item"><Link to="/">Home</Link></li>
           <li className="breadcrumb-item"><Link to={`/decks/${deckId}`}>{deck.name}</Link></li>
-          <li className="breadcrumb-item active" aria-current="page"><Link to={`/decks/${deckId}`}>{`Edit Deck ${deckId}`}</Link></li>
+          <li className="breadcrumb-item active" aria-current="page">{`Edit Deck ${deckId}`}</li>
         </ul>
       </nav>
       <div className="m-4">
