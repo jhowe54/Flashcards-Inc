@@ -32,32 +32,33 @@ function ViewDeck() {
     const confirmation = window.confirm("Are you sure you want to delete this Deck?")
     if(confirmation) {
       await deleteDeck(id);
-      history.go(-1);
+      history.push('/');
     } 
   }
 
     return (
-        <div className="container">
-            <nav aria-label="breadcrumb">
+        <div>
+            <nav aria-label="breadcrumb row">
                 <ul className="breadcrumb">
                     <li className="breadcrumb-item"><Link to="/">Home</Link></li>
-                    <li className="breadcrumb-item active" aria-current="page"><Link to={`/decks/${currentDeck.id}`}>{currentDeck.name}</Link></li>
+                    <li className="breadcrumb-item active" aria-current="page">{currentDeck.name}</li>
                 </ul>
             </nav>
             
-            <div>
-                <section>
+            <div className="row">
+                <section className="container">
                     <h3>{currentDeck.name}</h3>
                     <p>{currentDeck.description}</p>
-                    <button type="button" className="btn btn-secondary" onClick={() => history.push(`/decks/${deckId}/edit`)}>Edit</button>
-                    <button type="button" className="btn btn-primary">Study</button>
-                    <button type="button" className="btn btn-primary" onClick={() => history.push(`/decks/${deckId}/cards/new`)}>Add Cards</button>
-                    <button type="button" className="btn btn-danger" onClick={() => deleteHandler(currentDeck.id)}>Delete</button>
+                    <button type="button" className="btn btn-secondary m-2 col col-lg-1 col-sm-8" onClick={() => history.push(`/decks/${deckId}/edit`)}>Edit</button>
+                    <button type="button" className="btn btn-primary m-2 col col-lg-1 col-sm-8">Study</button>
+                    <button type="button" className="btn btn-primary m-2 col col-lg-2 col-sm-8" onClick={() => history.push(`/decks/${deckId}/cards/new`)}>Add Cards</button>
+                    <button type="button" className="btn btn-danger m-2 col col-lg-2 col-sm-8" onClick={() => deleteHandler(currentDeck.id)}>Delete Deck</button>
                 </section>
-                
+                <div className="container mt-5">
                 <Route>
                     <CardList cards={currentDeck.cards} />
                 </Route>
+                </div>
             </div>
         </div>
     )
