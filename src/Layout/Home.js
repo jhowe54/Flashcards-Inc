@@ -3,7 +3,7 @@ import { listDecks, deleteDeck } from "../utils/api";
 import { useEffect, useState } from "react"
 import ErrorMessage from "./ErrorMessage";
 import {useHistory} from "react-router-dom";
-
+import "./Home.css"
 
 
 function Home() {
@@ -33,14 +33,14 @@ function Home() {
 
     const list = decks.map((deck, index) => {
         return (
-            <div class="row">
+            <div class="row deck-wrapper mt-3">
                 <div className="col col-6 m-3">
                     <h1>{deck.name}</h1>
                     <p>{deck.description}</p>
                     <div className="deck-buttons">
-                        <button type="button" className="btn btn-secondary m-3" onClick={() => history.push(`/decks/${deck.id}`)}>View</button>
-                        <button type="button" className="btn btn-primary m-3">Study</button>
-                        <button type="button" className="btn btn-danger m-3" onClick={() => deleteHandler(deck.id)}>Delete</button>
+                        <button type="button" className="btn btn-secondary m-1" onClick={() => history.push(`/decks/${deck.id}`)}>View</button>
+                        <button type="button" className="btn btn-primary m-1">Study</button>
+                        <button type="button" className="btn btn-danger ml-5" onClick={() => deleteHandler(deck.id)}>Delete</button>
                     </div>
                 </div>
             </div>
@@ -50,7 +50,7 @@ function Home() {
     return (
         
         <main className="container">
-            <button className="btn btn-info">Create Deck</button>
+            <button type="button" className="btn btn-info" onClick={() => history.push(`/decks/new`)}>Create Deck</button>
             <section className="col">{list}</section>
         </main>
     )
