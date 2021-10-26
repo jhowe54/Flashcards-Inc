@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useParams, Link, useHistory } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { createDeck } from "../utils/api";
 import DeckForm from "./DeckForm";
 
