@@ -17,6 +17,7 @@ const history = useHistory();
               onChange={handleChange}
               placeholder={card.front}
               required
+              style={{backgroundColor: 'rgba(129, 129, 138, 0.425)'}}
             >
             </textarea>
             
@@ -34,6 +35,7 @@ const history = useHistory();
               onChange={handleChange}
               placeholder={card.back}
               required
+              style={{backgroundColor: 'rgba(129, 129, 138, 0.425)'}}
             >
             </textarea>
             
