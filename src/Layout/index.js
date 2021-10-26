@@ -7,6 +7,8 @@ import { Switch, Route } from "react-router-dom";
 import EditCard from "./EditCard";
 import EditDeck from "./EditDeck"
 import AddCard from "./AddCard"
+import CreateDeck from "./CreateDeck";
+
 function Layout() {
   return (
     <>
@@ -16,6 +18,9 @@ function Layout() {
           
           <Route exact path ='/'>
             <Home />
+          </Route>
+          <Route  path = '/decks/new'>
+            <CreateDeck />
           </Route>
           
           <Route exact path = '/decks/:deckId'>
