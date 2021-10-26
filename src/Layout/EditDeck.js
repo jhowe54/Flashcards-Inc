@@ -32,7 +32,6 @@ function EditDeck() {
                    throw error;
                }
            }
-       
        }
        loadDeck()
        return () => abortController.abort();
