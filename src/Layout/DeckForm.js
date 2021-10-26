@@ -1,6 +1,7 @@
 import React from "react";
 import {useHistory} from "react-router-dom";
 
+
 function DeckForm({handleChange, handleSubmit, deckId, deck, formData}) {
     const history = useHistory();
     return (
@@ -18,6 +19,7 @@ function DeckForm({handleChange, handleSubmit, deckId, deck, formData}) {
                   onChange={handleChange}
                   placeholder={deck.name}
                   required
+                  style={{backgroundColor: 'rgba(129, 129, 138, 0.425)'}}
                 />
                 
                 
@@ -35,13 +37,14 @@ function DeckForm({handleChange, handleSubmit, deckId, deck, formData}) {
                   onChange={handleChange}
                   placeholder={deck.description}
                   required
+                  style={{backgroundColor: 'rgba(129, 129, 138, 0.425)'}}
                 >
                 </textarea>
                 
               </label>
               <br/>
               <input type="submit" className="btn btn-primary mr-2" value="Submit" />
-              <button type="button" className="btn btn-secondary ml-2" onClick={() => history.push(`/decks/${deckId}`)}>Cancel</button>
+              <button type="button" className="btn btn-secondary ml-2" onClick={() => history.push(deckId ? `/decks/${deckId}` : '/')}>Cancel</button>
               
             </form>
             
