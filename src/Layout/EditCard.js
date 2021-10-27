@@ -25,7 +25,6 @@ function EditCard() {
     async function loadDeck() {
       try {
         const response = await readDeck(deckId, abortController.signal);
-        console.log(response);
         setDeck(() => response);
       } catch (error) {
         if (error.name !== "AbortError") {
@@ -44,7 +43,6 @@ function EditCard() {
     async function loadCard() {
       try {
         const response = await readCard(cardId, abortController.signal);
-        console.log(response);
         setFormData(() => response);
       } catch (error) {
         if (error.name !== "AbortError") {

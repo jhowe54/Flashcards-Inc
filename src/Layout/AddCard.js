@@ -24,7 +24,6 @@ function AddCard() {
     async function loadDeck() {
       try {
         const response = await readDeck(deckId, abortController.signal);
-        console.log(response);
         setDeck(() => response);
       } catch (error) {
         if (error.name !== "AbortError") {

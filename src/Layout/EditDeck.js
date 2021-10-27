@@ -21,7 +21,6 @@ function EditDeck() {
     async function loadDeck() {
       try {
         const response = await readDeck(deckId, abortController.signal);
-        console.log(response);
         setFormData(() => response);
       } catch (error) {
         if (error.name !== "AbortError") throw error;
