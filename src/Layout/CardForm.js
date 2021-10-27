@@ -39,7 +39,7 @@ const history = useHistory();
             
           </label>
           <br/>
-          <input type="submit" className="btn btn-primary mr-2" value="Save" />
+          <button type="submit" className="btn btn-primary mr-2" >Save</button>
           <button type="button" className="btn btn-secondary ml-2" onClick={() => history.push(`/decks/${deckId}`)}>Cancel</button>
           
         </form>
