@@ -4,6 +4,7 @@ import { useEffect, useState } from "react"
 import ErrorMessage from "./ErrorMessage";
 import {useHistory} from "react-router-dom";
 import "./Home.css"
+import  {FaTrash} from "react-icons/fa";
 
 
 function Home() {
@@ -31,16 +32,22 @@ function Home() {
         return <ErrorMessage error={error} />
     }
 
-    const list = decks.map((deck, index) => {
+    const list = decks.map((deck) => {
         return (
-            <div className="row deck-wrapper mt-3">
-                <div key={index} className="col col-6 m-3">
-                    <h1>{deck.name}</h1>
-                    <p>{deck.description}</p>
-                    <div className="deck-buttons">
+            <div className="deck-wrapper" key={deck.id}>
+                <div className="deck m-3">
+                    <div className="row card-count">
+                     <h1 className="col col-lg-7">{deck.name}</h1>
+                     <p className="col col-lg-6">{`${deck.cards.length} cards`}</p>
+                    </div>
+                    <div className="description row">
+                      <p>{deck.description}</p>
+                    </div>
+                    
+                    <div className="row deck-buttons">
                         <button type="button" className="btn btn-secondary m-1" onClick={() => history.push(`/decks/${deck.id}`)}>View</button>
-                        <button type="button" className="btn btn-primary m-1">Study</button>
-                        <button type="button" className="btn btn-danger ml-5" onClick={() => deleteHandler(deck.id)}>Delete</button>
+                        <button type="button" className="btn btn-primary m-1" onClick={() => history.push(`/decks/${deck.id}/study`)}>Study</button>
+                        <button type="button" className="btn btn-danger m-1" onClick={() => deleteHandler(deck.id)}><FaTrash /></button>
                     </div>
                 </div>
             </div>
@@ -50,7 +57,7 @@ function Home() {
     return (
         
         <main className="container">
-            <button type="button" className="btn btn-info" onClick={() => history.push(`/decks/new`)}>Create Deck</button>
+            <button type="button" className="btn btn-info ml-3" onClick={() => history.push(`/decks/new`)}>Create Deck</button>
             <section className="col">{list}</section>
         </main>
     )
