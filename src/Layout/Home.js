@@ -33,8 +33,8 @@ function Home() {
 
     const list = decks.map((deck, index) => {
         return (
-            <div class="row deck-wrapper mt-3">
-                <div className="col col-6 m-3">
+            <div className="row deck-wrapper mt-3">
+                <div key={index} className="col col-6 m-3">
                     <h1>{deck.name}</h1>
                     <p>{deck.description}</p>
                     <div className="deck-buttons">
