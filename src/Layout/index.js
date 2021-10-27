@@ -8,6 +8,7 @@ import EditCard from "./EditCard";
 import EditDeck from "./EditDeck"
 import AddCard from "./AddCard"
 import CreateDeck from "./CreateDeck";
+import Study from "./Study";
 
 function Layout() {
   return (
@@ -31,6 +32,10 @@ function Layout() {
           <Route exact path = '/decks/:deckId/edit'>
             <EditDeck />
           </Route> 
+
+          <Route exact path = '/decks/:deckId/study'>
+            <Study />
+          </Route>
           
           <Route path = '/decks/:deckId/cards/:cardId/edit' >
             <EditCard />
