@@ -1,6 +1,5 @@
-import React, {useState, useEffect} from "react";
-import {useParams} from "react-router-dom"
-import { readCard } from "../utils/api";
+import React, {useState} from "react";
+
 function Card({ studyDeck }) {
 
     const [flippedState, setFlippedState] = useState(false);
