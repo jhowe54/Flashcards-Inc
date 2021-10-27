@@ -12,7 +12,6 @@ function CreateDeck() {
     id: ""
   };
 
-  const [deck, setDeck] = useState({});
   const [formData, setFormData] = useState(initialFormState);
 
 
@@ -44,7 +43,6 @@ function CreateDeck() {
           handleChange={handleChange}
           handleSubmit={handleSubmit}
           formData={formData}
-          deck={deck}
         />
       </div>
     </div>
