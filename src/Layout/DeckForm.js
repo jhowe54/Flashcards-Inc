@@ -2,7 +2,7 @@ import React from "react";
 import {useHistory} from "react-router-dom";
 
 
-function DeckForm({handleChange, handleSubmit, deckId, deck, formData}) {
+function DeckForm({handleChange, handleSubmit, deckId, formData}) {
     const history = useHistory();
     return (
         <form onSubmit={handleSubmit} className="ml-3">
@@ -17,7 +17,6 @@ function DeckForm({handleChange, handleSubmit, deckId, deck, formData}) {
                   type="text"
                   value={formData.name}
                   onChange={handleChange}
-                  placeholder={deck.name}
                   required
                   style={{backgroundColor: 'rgba(129, 129, 138, 0.425)'}}
                 />
@@ -35,7 +34,6 @@ function DeckForm({handleChange, handleSubmit, deckId, deck, formData}) {
                   name="description"
                   value={formData.description}
                   onChange={handleChange}
-                  placeholder={deck.description}
                   required
                   style={{backgroundColor: 'rgba(129, 129, 138, 0.425)'}}
                 >

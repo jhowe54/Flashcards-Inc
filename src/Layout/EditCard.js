@@ -8,7 +8,6 @@ function EditCard() {
   const { deckId, cardId } = useParams();
   const history = useHistory();
   const [deck, setDeck] = useState({});
-  const [card, setCard] = useState({});
 
   const initialFormState = {
     front: "",
@@ -46,7 +45,7 @@ function EditCard() {
       try {
         const response = await readCard(cardId, abortController.signal);
         console.log(response);
-        setCard(() => response);
+        setFormData(() => response);
       } catch (error) {
         if (error.name !== "AbortError") {
           throw error;
@@ -90,7 +89,6 @@ function EditCard() {
           handleSubmit={handleSubmit}
           deckId={deckId}
           formData={formData}
-          card={card}
         />
       </div>
     </div>

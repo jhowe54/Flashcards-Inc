@@ -6,7 +6,6 @@ import DeckForm from "./DeckForm";
 function EditDeck() {
   const { deckId } = useParams();
   const history = useHistory();
-
   const initialFormState = {
     description: "",
     name: "",
@@ -14,7 +13,7 @@ function EditDeck() {
   };
 
   const [formData, setFormData] = useState(initialFormState);
-  const [deck, setDeck] = useState({ name: "Loading...", cards: [] });
+  
 
   useEffect(() => {
     const abortController = new AbortController();
@@ -23,7 +22,7 @@ function EditDeck() {
       try {
         const response = await readDeck(deckId, abortController.signal);
         console.log(response);
-        setDeck(() => ({ ...response }));
+        setFormData(() => response);
       } catch (error) {
         if (error.name !== "AbortError") throw error;
       }
@@ -51,18 +50,17 @@ function EditDeck() {
       <nav aria-label="breadcrumb">
         <ul className="breadcrumb">
           <li className="breadcrumb-item"><Link to="/">Home</Link></li>
-          <li className="breadcrumb-item"><Link to={`/decks/${deckId}`}>{deck.name}</Link></li>
+          <li className="breadcrumb-item"><Link to={`/decks/${deckId}`}>{formData.name}</Link></li>
           <li className="breadcrumb-item active" aria-current="page">{`Edit Deck ${deckId}`}</li>
         </ul>
       </nav>
       <div className="m-4">
-        <h2>Edit Deck {deck.id}</h2>
+        <h2>Edit Deck {formData.id}</h2>
         <DeckForm
           handleChange={handleChange}
           handleSubmit={handleSubmit}
           deckId={deckId}
           formData={formData}
-          deck={deck}
         />
       </div>
     </div>

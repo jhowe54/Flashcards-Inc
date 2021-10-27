@@ -1,7 +1,7 @@
 import React from "react";
 import {useHistory} from "react-router-dom";
 
-function CardForm({handleSubmit, handleChange, deckId, formData, card}) {
+function CardForm({handleSubmit, handleChange, deckId, formData}) {
 const history = useHistory();
     return (
     <form onSubmit={handleSubmit} className="ml-3">
@@ -15,7 +15,6 @@ const history = useHistory();
               name="front"
               value={formData.front}
               onChange={handleChange}
-              placeholder={card.front}
               required
               style={{backgroundColor: 'rgba(129, 129, 138, 0.425)'}}
             >
@@ -33,7 +32,6 @@ const history = useHistory();
               name="back"
               value={formData.back}
               onChange={handleChange}
-              placeholder={card.back}
               required
               style={{backgroundColor: 'rgba(129, 129, 138, 0.425)'}}
             >

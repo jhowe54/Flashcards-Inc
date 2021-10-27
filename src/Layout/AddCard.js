@@ -7,7 +7,6 @@ function AddCard() {
     const { deckId } = useParams();
   const history = useHistory();
   const [deck, setDeck] = useState({});
-  const [card, setCard] = useState({});
 
   const initialFormState = {
     front: "",
@@ -62,18 +61,17 @@ function AddCard() {
         <ul className="breadcrumb">
           <li className="breadcrumb-item"><Link to="/">Home</Link></li>
           <li className="breadcrumb-item "><Link to={`/decks/${deckId}`}>{deck.name}</Link></li>
-          <li className="breadcrumb-item" aria-current="page"><Link to={`/decks/${deckId}`}>Add Card</Link></li>
+          <li className="breadcrumb-item active" aria-current="page">Add Card</li>
         </ul>
       </nav>
 
       <div className="m-4">
-        <h2>Edit Card</h2>
+        <h2>Add Card</h2>
         <CardForm
           handleChange={handleChange}
           handleSubmit={handleSubmit}
           deckId={deckId}
           formData={formData}
-          card={card}
         />
       </div>
     </div>
