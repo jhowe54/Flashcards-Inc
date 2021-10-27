@@ -1,6 +1,26 @@
 .deck-wrapper {
     background-color: rgba(129, 129, 138, 0.425);
     border-radius: 5px;
-    height: auto;
+    width: 70%;
+    box-sizing: border-box;
 }
 
+.deck-buttons {
+    margin-bottom: 10px;
+}
+
+.deck {
+    padding: 8px;
+}
+
+.description {
+    width: 70%;
+    margin: 0;
+    text-align: left;
+}
+
+
+
+.card-count p {
+    align-self: flex-end;
+}
