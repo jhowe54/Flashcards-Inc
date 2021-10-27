@@ -41,7 +41,7 @@ function DeckForm({handleChange, handleSubmit, deckId, formData}) {
                 
               </label>
               <br/>
-              <input type="submit" className="btn btn-primary mr-2" value="Submit" />
+              <button type="submit" className="btn btn-primary mr-2">Submit</button>
               <button type="button" className="btn btn-secondary ml-2" onClick={() => history.push(deckId ? `/decks/${deckId}` : '/')}>Cancel</button>
               
             </form>
