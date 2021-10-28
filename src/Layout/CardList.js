@@ -24,8 +24,8 @@ function CardList({ cards = [] }) {
           <div className="col col-lg-5 col-md-5 col-sm-5 card-center" > 
               {card.back}
               <div className="text-right mt-4">
-                <button type="button" className="btn btn-secondary m-1 col-lg-2 col-md-5 p-1" onClick={() => history.push(`/decks/${card.deckId}/cards/${card.id}/edit`)}>Edit</button>
-                <button type="button" className="btn btn-danger m-1 col-lg-3 col-md-5 p-1" onClick={() => deleteHandler(card.id)}>Delete</button>
+                <button type="button" className="btn btn-secondary m-1 col-lg-2 col-md-5 p-1 sml" onClick={() => history.push(`/decks/${card.deckId}/cards/${card.id}/edit`)}>Edit</button>
+                <button type="button" className="btn btn-danger m-1 col-lg-3 col-md-5 p-1 sml" onClick={() => deleteHandler(card.id)}>Delete</button>
               </div>
               
         </div>

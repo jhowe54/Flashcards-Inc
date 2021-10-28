@@ -8,8 +8,14 @@
 
 @media only screen and (max-width: 800px){
     .card-center {
-        margin: 5px;
-        padding: 10px;
+        margin: 3px;
+        padding: 20px;
+        height: 120px;
+        display: flex;
+        flex-direction: column;
+    }
+    .sml {
+        width: 60px;
     }
 
     .ml-5 {

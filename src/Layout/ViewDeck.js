@@ -49,10 +49,10 @@ function ViewDeck() {
                 <section className="container deck-background">
                     <h3>{currentDeck.name}</h3>
                     <p>{currentDeck.description}</p>
-                    <button type="button" className="btn btn-secondary m-2 col col-lg-1 col-sm-8" onClick={() => history.push(`/decks/${deckId}/edit`)}>Edit</button>
-                    <button type="button" className="btn btn-primary m-2 col col-lg-1 col-sm-8" onClick={() => history.push(`/decks/${deckId}/study`)}>Study</button>
-                    <button type="button" className="btn btn-primary m-2 col col-lg-2 col-sm-8" onClick={() => history.push(`/decks/${deckId}/cards/new`)}>Add Cards</button>
-                    <button type="button" className="btn btn-danger m-2 col col-lg-2 col-sm-8" onClick={() => deleteHandler(currentDeck.id)}>Delete Deck</button>
+                    <button type="button" className="btn btn-secondary deck-buttons" onClick={() => history.push(`/decks/${deckId}/edit`)}>Edit</button>
+                    <button type="button" className="btn btn-primary deck-buttons" onClick={() => history.push(`/decks/${deckId}/study`)}>Study</button>
+                    <button type="button" className="btn btn-primary deck-buttons" onClick={() => history.push(`/decks/${deckId}/cards/new`)}>Add Cards</button>
+                    <button type="button" className="btn btn-danger deck-buttons" onClick={() => deleteHandler(currentDeck.id)}>Delete Deck</button>
                 </section>
                 <div className="container mt-5">
                 <Route>

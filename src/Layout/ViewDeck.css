@@ -8,3 +8,20 @@
     margin: 0 auto;
     width: 100%;
 }
+
+.deck-buttons {
+    margin: 5px;
+}
+
+@media only screen and (max-width: 800px){
+    .deck-background {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .m-2 {
+        margin: 0 auto;
+        width: 100%;
+    }
+}
