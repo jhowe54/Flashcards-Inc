@@ -41,7 +41,7 @@ function Home() {
                      <p className="col col-lg-6 col-md-6 col-sm-6">{`${deck.cards.length} cards`}</p>
                     </div>
                     
-                      <p className="col col-lg-10 col-md-10 col-sm-10">{deck.description}</p>
+                      <p className="col col-lg-10 col-md-10 col-sm-10 description">{deck.description}</p>
                     
                     
                     <div className="row deck-buttons">

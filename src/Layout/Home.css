@@ -4,7 +4,7 @@
     border-radius: 5px;
     box-sizing: border-box;
     transition: all .3s ease-in-out;
-    margin: 10px;
+    margin: 20px;
 }
 .deck-grow {
     margin: 5px;
@@ -40,7 +40,7 @@
 }
 
 .button-small {
-    margin-left: 25px;
+    margin-left: 35px;
 }
 
 h2 { 
@@ -60,5 +60,20 @@ h2 {
         width: 90%;
         margin: 0 auto;
         justify-self: center;
+    }
+    .description {
+        text-align: center !important;
+        width: 100%;
+    }
+    .deck-buttons{
+        justify-content: center;
+    }
+    .deck-wrapper {
+        background-color: #5299e467;
+        box-shadow: gray 5px 5px 8px 1px;
+        border-radius: 5px;
+        box-sizing: border-box;
+        transition: all .3s ease-in-out;
+        margin: 15px;
     }
 }
