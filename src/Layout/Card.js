@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-
+import "./Card.css"
 function Card({ studyDeck }) {
 
     const [flippedState, setFlippedState] = useState(false);
@@ -26,8 +26,8 @@ function Card({ studyDeck }) {
    }
     return (
         <div className="card-wrapper">
-            <div className="card">
-                <p>{`Card ${currentIndex + 1} of ${studyDeck.cards.length}`}</p>
+            <div>
+                <h4>{`Card ${currentIndex + 1} of ${studyDeck.cards.length}`}</h4>
             </div>
             { !flippedState ?
             <div>
@@ -44,11 +44,11 @@ function Card({ studyDeck }) {
                     <p>Answer: {getCardFromDeck().back}</p>
                 </div>
                 <div className="buttons">
-                    <button type="button" className="btn btn-secondary" onClick={flipHandler}>Flip</button>
+                    <button type="button" className="btn btn-secondary m-1" onClick={flipHandler}>Flip</button>
                 { currentIndex === studyDeck.cards.length - 1 ? //check to see if its the last card in deck
-                    <button type="button" className="btn btn-secondary" onClick={restartHandler}>Restart</button> //add restart handler
+                    <button type="button" className="btn btn-secondary m-1" onClick={restartHandler}>Restart</button> //add restart handler
                 :
-                    <button type="button" className="btn btn-secondary" onClick={handleNextCard}>Next</button>
+                    <button type="button" className="btn btn-secondary m-1" onClick={handleNextCard}>Next</button>
                 }
                 
                 </div>

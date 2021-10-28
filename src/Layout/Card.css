@@ -1,0 +1,15 @@
+.card-wrapper {
+    background-color: #5299e467;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+p {
+    font-size: 19px;
+}
+
+.card-info {
+    box-sizing: border-box;
+    width: 400px;
+    height: 100px;
+}
