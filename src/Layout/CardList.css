@@ -10,7 +10,6 @@
     .card-center {
         margin: 3px;
         padding: 20px;
-        
         display: flex;
         flex-direction: column;
     }
