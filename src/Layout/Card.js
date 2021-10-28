@@ -20,30 +20,30 @@ function Card({ studyDeck }) {
        setFlippedState(false);
    }
 
-   function getCardFromDeck() {
-       const card = studyDeck.cards
+   function getCardFromDeck() { 
+       const card = studyDeck.cards 
        return card[currentIndex]
    }
     return (
-        <div class="card-wrapper">
-            <div class="card">
+        <div className="card-wrapper">
+            <div className="card">
                 <p>{`Card ${currentIndex + 1} of ${studyDeck.cards.length}`}</p>
             </div>
             { !flippedState ?
             <div>
-                <div class="card-info">
+                <div className="card-info">
                     <p>Question: {getCardFromDeck().front}</p>
                 </div>
-                <div class="buttons">
+                <div className="buttons">
                 <button type="button" className="btn btn-secondary" onClick={flipHandler}>Flip</button>
                 </div>
             </div>
             :
             <div>
-                <div class="card-info">
+                <div className="card-info">
                     <p>Answer: {getCardFromDeck().back}</p>
                 </div>
-                <div class="buttons">
+                <div className="buttons">
                     <button type="button" className="btn btn-secondary" onClick={flipHandler}>Flip</button>
                 { currentIndex === studyDeck.cards.length - 1 ? //check to see if its the last card in deck
                     <button type="button" className="btn btn-secondary" onClick={restartHandler}>Restart</button> //add restart handler
