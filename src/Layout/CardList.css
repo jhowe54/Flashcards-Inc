@@ -1,10 +1,19 @@
 .card-center{
-    
-    padding: 15px;
-    background-color: rgba(129, 129, 138, 0.425);
+    padding: 25px;
+    background-color: #5299e467;
     border-radius: 5px;
-    margin: 5px;
+    margin: 20px;
     height: auto;
 }
 
- 
+@media only screen and (max-width: 800px){
+    .card-center {
+        margin: 5px;
+        padding: 10px;
+    }
+
+    .ml-5 {
+        margin: 0 !important;
+    }
+}
+

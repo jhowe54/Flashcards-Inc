@@ -1,10 +1,13 @@
 .deck-wrapper {
-    background-color: rgba(129, 129, 138, 0.425);
+    background-color: #5299e467;
     box-shadow: gray 5px 5px 8px 1px;
     border-radius: 5px;
-    width: 70%;
     box-sizing: border-box;
     transition: all .3s ease-in-out;
+    margin: 10px;
+}
+.deck-grow {
+    margin: 5px;
 }
 
 .deck-buttons {
@@ -20,6 +23,7 @@
     width: 70%;
     margin: 0;
     text-align: left;
+    padding: 5px;
 }
 
 
@@ -33,4 +37,28 @@
 .deck-wrapper:hover {
     transform: scale(1.01);
     box-shadow: gray 6px 6px 9px 2px;
+}
+
+.button-small {
+    margin-left: 25px;
+}
+
+h2 { 
+  color: rgb(65, 64, 64);
+}
+
+@media only screen and (max-width: 800px){
+    .container-small {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0;
+    }
+
+    .button-small {
+        width: 90%;
+        margin: 0 auto;
+        justify-self: center;
+    }
 }

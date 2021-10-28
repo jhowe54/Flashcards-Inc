@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { deleteDeck, readDeck } from "../utils/api";
 import {useParams, Link, useHistory, Route} from "react-router-dom";
 import CardList from "./CardList";
+import "./ViewDeck.css"
 function ViewDeck() {
     const { deckId }  = useParams();
     const history = useHistory();
@@ -45,7 +46,7 @@ function ViewDeck() {
             </nav>
             
             <div className="row">
-                <section className="container">
+                <section className="container deck-background">
                     <h3>{currentDeck.name}</h3>
                     <p>{currentDeck.description}</p>
                     <button type="button" className="btn btn-secondary m-2 col col-lg-1 col-sm-8" onClick={() => history.push(`/decks/${deckId}/edit`)}>Edit</button>

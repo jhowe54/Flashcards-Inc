@@ -34,15 +34,15 @@ function Home() {
 
     const list = decks.map((deck) => {
         return (
-            <div className="deck-wrapper" key={deck.id}>
-                <div className="deck m-3 deck-grow">
-                    <div className="row card-count">
-                     <h1 className="col col-lg-7">{deck.name}</h1>
-                     <p className="col col-lg-6">{`${deck.cards.length} cards`}</p>
+            <div className=" deck-wrapper" key={deck.id}>
+                <div className="deck deck-grow">
+                    <div className=" card-count">
+                     <h2 className="col col-lg-7 col-md-7 col-sm-7">{deck.name}</h2>
+                     <p className="col col-lg-6 col-md-6 col-sm-6">{`${deck.cards.length} cards`}</p>
                     </div>
-                    <div className="description row">
-                      <p>{deck.description}</p>
-                    </div>
+                    
+                      <p className="col col-lg-10 col-md-10 col-sm-10">{deck.description}</p>
+                    
                     
                     <div className="row deck-buttons">
                         <button type="button" className="btn btn-secondary m-1" onClick={() => history.push(`/decks/${deck.id}`)}>View</button>
@@ -56,8 +56,8 @@ function Home() {
 
     return (
         
-        <main className="container">
-            <button type="button" className="btn btn-info ml-3" onClick={() => history.push(`/decks/new`)}>Create Deck</button>
+        <main className="container container-small">
+            <button type="button" className="btn btn-info button-small" onClick={() => history.push(`/decks/new`)}>Create Deck</button>
             <section className="col">{list}</section>
         </main>
     )
