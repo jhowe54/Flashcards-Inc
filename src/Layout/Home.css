@@ -1,8 +1,10 @@
 .deck-wrapper {
     background-color: rgba(129, 129, 138, 0.425);
+    box-shadow: gray 5px 5px 8px 1px;
     border-radius: 5px;
     width: 70%;
     box-sizing: border-box;
+    transition: all .3s ease-in-out;
 }
 
 .deck-buttons {
@@ -11,6 +13,7 @@
 
 .deck {
     padding: 8px;
+    
 }
 
 .description {
@@ -23,4 +26,11 @@
 
 .card-count p {
     align-self: flex-end;
+}
+
+
+
+.deck-wrapper:hover {
+    transform: scale(1.01);
+    box-shadow: gray 6px 6px 9px 2px;
 }

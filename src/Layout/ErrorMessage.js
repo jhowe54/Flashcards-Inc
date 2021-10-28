@@ -7,4 +7,4 @@ export const ErrorMessage = ({ error, children }) => (
   </main>
 );
 
-export default ErrorMessage;
+export default ErrorMessage; 

@@ -35,7 +35,7 @@ function Home() {
     const list = decks.map((deck) => {
         return (
             <div className="deck-wrapper" key={deck.id}>
-                <div className="deck m-3">
+                <div className="deck m-3 deck-grow">
                     <div className="row card-count">
                      <h1 className="col col-lg-7">{deck.name}</h1>
                      <p className="col col-lg-6">{`${deck.cards.length} cards`}</p>
