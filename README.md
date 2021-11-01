@@ -35,9 +35,12 @@ The last card gives the user the option to restart, which will take them back to
 ![Alt text](/screenshots/not-enough-cards.png?raw=true "Home Screen")
 If a deck has less than three cards, the _study_ screen will inform the user that at least three cards are required to begin a study session.
 
-# Technology
+## Technology
 ### Built with:
 * React, React Router 
     * Created with [create-react-app](https://github.com/facebook/create-react-app) 
     * Styling: Bootstrap 4, CSS3
 
+## Planned Features:
+* Personal accounts
+* New options for study sessions 
