@@ -6,47 +6,93 @@
       "description": "React's component structure allows for quickly building a complex web application that relies on DOM manipulation. "
     },
     {
-      "name": "React Router",
-      "description": "React Router is a collection of navigational components that compose declaratively with your application.",
+      "description": "Interactive components, asynchronous state, state over multiple components, arrays and objects as state, forms with input fields, complex forms",
+      "name": "React State Management",
       "id": 2
+    },
+    {
+      "description": "The effect hook, effect hook with cleanup, APIs with hooks",
+      "name": "React and APIs with Hooks",
+      "id": 3
+    },
+    {
+      "description": "Using Router, Switch, Route, Link, Route Parameters, Modifying the history, nested routes ",
+      "name": "React Router",
+      "id": 4
     }
   ],
   "cards": [
     {
-      "id": 1,
-      "front": "Differentiate between Real DOM and Virtual DOM.",
-      "back": "Virtual DOM updates are faster but do not directly update the HTML",
-      "deckId": 1
+      "front": "Single-responsibility principle",
+      "back": "A principle that states that each module, function, or component in a program should have responsibility for one single part of the program",
+      "deckId": 1,
+      "id": 6
     },
     {
-      "id": 2,
-      "front": "How do you modify the state of a different React component?",
-      "back": "Not at all! State is visible to the component only.",
-      "deckId": 1
-    },
-    {
-      "id": 3,
-      "front": "How do you pass data 'down' to a React child component?",
-      "back": "As properties or props",
-      "deckId": 1
-    },
-    {
-      "front": "What path will match the follow Route?\n<Route>\n  <NotFound />\n</Route>",
-      "back": "All paths. A route with no path matches all URL's",
-      "deckId": 2,
-      "id": 4
-    },
-    {
-      "front": "What does <Switch> do?",
-      "back": "Renders the first matching child <Route> ",
-      "deckId": 2,
-      "id": 5
-    },
-    {
-      "front": "How do you pass data 'down' to a React child component?",
-      "back": "As properties or props",
+      "front": "Functional component",
+      "back": "A JavaScript function that returns JSX",
       "deckId": 1,
       "id": 7
+    },
+    {
+      "front": "Prop",
+      "back": "An input passed into a React component as an object",
+      "deckId": 1,
+      "id": 8
+    },
+    {
+      "front": "Hook",
+      "back": "A special React function that gives you access to some React process",
+      "deckId": 2,
+      "id": 9
+    },
+    {
+      "front": "One-way data flow",
+      "back": "Also called one-way binding, the idea that changes in the props or state will cascade downward to effect changes further on",
+      "deckId": 2,
+      "id": 10
+    },
+    {
+      "front": "Race condition",
+      "back": "Also called a race hazard, a condition where a program depends on the relative timing of one or more processes to function correctly",
+      "deckId": 2,
+      "id": 11
+    },
+    {
+      "front": "Lifting up state",
+      "back": "The process of moving state higher up in a component tree, enabling state to be passed from a parent component to multiple children",
+      "deckId": 2,
+      "id": 12
+    },
+    {
+      "front": "Controlled component",
+      "back": "A form element whose value is managed in React state",
+      "deckId": 2,
+      "id": 13
+    },
+    {
+      "front": "Side Effect",
+      "back": "Anything in a function or expression that affects something outside the scope of the function or expression",
+      "deckId": 3,
+      "id": 14
+    },
+    {
+      "front": "URL parameter",
+      "back": "Also called a param, the part of a URL that is variable and that web applications need to extract",
+      "deckId": 4,
+      "id": 15
+    },
+    {
+      "front": "Programmatic navigation",
+      "back": "Navigation that causes a user to be redirected as a result of an event—such as logging in or saving—that occurs on a route",
+      "deckId": 4,
+      "id": 16
+    },
+    {
+      "front": "Nested route",
+      "back": "Also called a child route, a route displayed inside of another route",
+      "deckId": 4,
+      "id": 17
     }
   ]
 }

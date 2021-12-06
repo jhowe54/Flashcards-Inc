@@ -27,13 +27,14 @@ const history = useHistory();
             <textarea
               className="form-control"
               cols="50"
-              rows="2"
+              rows="5"
               id="back"
               name="back"
               value={formData.back}
               onChange={handleChange}
               required
               style={{backgroundColor: 'rgba(129, 129, 138, 0.425)'}}
+
             >
             </textarea>
             
